@@ -1,0 +1,173 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f0ec;
+color:#222;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+padding:20px 8%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 10%;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.chapter{
+font-size:20px;
+font-style:italic;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:100px;
+color:#d88bab;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.quote{
+font-style:italic;
+margin:20px 0;
+}
+
+.hero-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.card-section{
+width:90%;
+margin:100px auto;
+padding:50px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.pink{
+background:#f7dce7;
+}
+
+.cream{
+background:#fffaf6;
+}
+
+.card-section h2,
+.reflection h2,
+#gallery h2{
+font-family:'Cormorant Garamond',serif;
+font-size:55px;
+margin-bottom:20px;
+color:#c56d93;
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:30px;
+}
+
+.photo-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.photo-grid img:hover{
+transform:scale(1.05);
+}
+
+.reflection{
+padding:100px 10%;
+text-align:center;
+}
+
+#gallery{
+padding:100px 10%;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.08);
+}
+
+footer{
+background:#f7dce7;
+padding:50px;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+.photo-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:60px;
+}
+}
