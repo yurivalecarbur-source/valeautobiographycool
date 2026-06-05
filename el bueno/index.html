@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#D8C4E8">
+<meta name="description" content="Yuridia Valentina Carbajal Burrola — Autobiography: Early Life, Challenges, Achievements, Today, Future, Reflections & Gallery">
+<title>Yuridia Valentina · Autobiography</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background: #FAF9F6;
+font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+color: #2E2538;
+overflow-x: hidden;
+line-height: 1.65;
+scroll-behavior: smooth;
+}
+
+:root {
+--lavender: #D8C4E8;
+--lilac: #C8A2C8;
+--lilac-deep: #8E6FA4;
+--sage: #B7C39B;
+--sage-deep: #6E7F4D;
+--beige: #F5F1EB;
+--offwhite: #FAF9F6;
+--ink: #2E2538;
+--ink-soft: #6E6377;
+--line: rgba(46, 37, 56, 0.1);
+--radius: 24px;
+--radius-sm: 16px;
+--shadow-soft: 0 20px 35px -18px rgba(46, 37, 56, 0.2);
+--shadow-card: 0 28px 45px -20px rgba(46, 37, 56, 0.3);
+--container: 1300px;
+}
+
+/* reveal animation */
+.reveal {
+opacity: 0;
+transform: translateY(35px);
+transition: opacity 0.85s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.in-view {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* navbar */
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 16px clamp(20px, 5vw, 56px);
+background: rgba(250, 249, 246, 0.78);
+backdrop-filter: blur(16px);
+border-bottom: 1px solid var(--line);
+transition: all 0.3s ease;
+}
+.navbar.scrolled {
+padding: 10px clamp(20px, 5vw, 56px);
+background: rgba(250, 249, 246, 0.94);
+}
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+text-decoration: none;
+}
+.brand-mark {
+width: 42px;
+height: 42px;
+background: linear-gradient(145deg, var(--lavender), var(--lilac));
+border-radius: 50%;
+display: grid;
+place-items: center;
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+color: white;
+font-size: 22px;
+box-shadow: var(--shadow-soft);
+}
+.brand-name {
+font-family: 'Playfair Display', serif;
+font-weight: 600;
+font-size: 1rem;
+letter-spacing: -0.2px;
+color: var(--ink);
+}
+.nav-links {
+display: flex;
+gap: 1.8rem;
+align-items: center;
+}
+.nav-links a {
+text-decoration: none;
+font-size: 0.8rem;
+font-weight: 500;
+color: var(--ink);
+transition: color 0.25s;
+letter-spacing: 0.3px;
+}
+.nav-links a span {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+color: var(--lilac-deep);
+margin-right: 4px;
+font-weight: 600;
+}
+.nav-links a:hover, .nav-links a.active {
+color: var(--lilac-deep);
+}
+.menu-toggle {
+display: none;
+flex-direction: column;
+gap: 6px;
+background: none;
+border: none;
+cursor: pointer;
+}
+.menu-toggle span {
+width: 26px;
+height: 2px;
+background: var(--ink);
+transition: 0.3s;
+}
+
+/* hero */
+.hero {
+padding: 140px clamp(20px, 5vw, 56px) 80px;
+background: radial-gradient(60% 50% at 20% 0%, rgba(216,196,232,0.45), transparent 70%),
+radial-gradient(40% 40% at 90% 40%, rgba(183,195,155,0.35), transparent);
+position: relative;
+}
+.hero-grid {
+max-width: var(--container);
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1.1fr;
+gap: 55px;
+align-items: center;
+}
+.display {
+font-family: 'Playfair Display', serif;
+font-size: clamp(48px, 8vw, 98px);
+line-height: 1.02;
+margin: 0.5rem 0 0.25rem;
+}
+.display em {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+font-weight: 400;
+color: var(--lilac-deep);
+}
+.eyebrow {
+text-transform: uppercase;
+letter-spacing: 0.3rem;
+font-size: 0.7rem;
+color: var(--ink-soft);
+}
+.quote {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.35rem;
+border-left: 3px solid var(--lilac);
+padding-left: 1.3rem;
+margin: 1.6rem 0;
+font-style: italic;
+color: var(--ink);
+}
+.intro {
+color: var(--ink-soft);
+max-width: 55ch;
+}
+.btn-group {
+display: flex;
+gap: 18px;
+margin-top: 32px;
+flex-wrap: wrap;
+}
+.btn {
+padding: 12px 28px;
+border-radius: 60px;
+font-weight: 600;
+font-size: 0.75rem;
+letter-spacing: 0.1rem;
+text-transform: uppercase;
+transition: 0.25s;
+text-decoration: none;
+display: inline-block;
+}
+.btn-primary {
+background: var(--lilac-deep);
+color: white;
+box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover {
+background: var(--ink);
+transform: translateY(-3px);
+}
+.btn-ghost {
+border: 1px solid var(--lilac-deep);
+color: var(--lilac-deep);
+}
+.btn-ghost:hover {
+background: var(--lilac-deep);
+color: white;
+transform: translateY(-3px);
+}
+
+/* collage */
+.hero-collage {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(6, 65px);
+gap: 14px;
+}
+.tile {
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: var(--shadow-card);
+transition: all 0.4s ease;
+background: var(--lavender);
+}
+.tile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.6s ease, filter 0.4s;
+}
+.tile:hover img {
+transform: scale(1.07);
+filter: brightness(1.02);
+}
+.tile-main {
+grid-column: 1 / span 4;
+grid-row: 1 / span 6;
+}
+.tile-a { grid-column: 5 / span 2; grid-row: 1 / span 2; }
+.tile-b { grid-column: 5 / span 2; grid-row: 3 / span 2; }
+.tile-c { grid-column: 5 / span 1; grid-row: 5 / span 2; }
+.tile-d { grid-column: 6 / span 1; grid-row: 5 / span 2; }
+.scroll-cue {
+position: absolute;
+bottom: 28px;
+left: 50%;
+transform: translateX(-50%);
+width: 28px;
+height: 44px;
+border: 1.5px solid var(--lilac-deep);
+border-radius: 40px;
+display: flex;
+justify-content: center;
+}
+.scroll-cue::after {
+content: '';
+width: 2px;
+height: 9px;
+background: var(--lilac-deep);
+border-radius: 2px;
+margin-top: 8px;
+animation: bounce 1.7s infinite;
+}
+@keyframes bounce {
+0% { transform: translateY(0); opacity: 0.3; }
+50% { transform: translateY(8px); opacity: 1; }
+100% { transform: translateY(0); opacity: 0.3; }
+}
+
+/* sections */
+.chapter {
+padding: 100px clamp(20px, 5vw, 56px);
+position: relative;
+}
+.chapter-sage { background: linear-gradient(120deg, var(--offwhite), #EDF2E3); }
+.chapter-lavender { background: linear-gradient(120deg, var(--offwhite), #F3E9FA); }
+.chapter-beige { background: linear-gradient(120deg, var(--offwhite), var(--beige)); }
+.chapter-head {
+max-width: var(--container);
+margin: 0 auto 48px auto;
+}
+.chapter-num {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+color: var(--lilac-deep);
+letter-spacing: 0.2rem;
+font-size: 0.8rem;
+text-transform: uppercase;
+}
+.section-title {
+font-size: clamp(38px, 6vw, 76px);
+font-family: 'Playfair Display', serif;
+margin: 8px 0 12px;
+}
+.section-title em {
+font-style: italic;
+font-family: 'Cormorant Garamond', serif;
+color: var(--lilac-deep);
+}
+.section-sub {
+font-style: italic;
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.2rem;
+color: var(--ink-soft);
+}
+
+/* chapter1 grid */
+.ch1-grid {
+max-width: var(--container);
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 22px;
+grid-auto-rows: 200px;
+}
+.ch1-text {
+grid-column: span 2;
+grid-row: span 2;
+background: white;
+padding: 2rem;
+border-radius: var(--radius);
+box-shadow: var(--shadow-soft);
+}
+.ch1-img {
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: var(--shadow-card);
+}
+.ch1-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.ch1-img:hover img { transform: scale(1.05); }
+
+/* alternate rows */
+.alt-list {
+max-width: var(--container);
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 4rem;
+}
+.alt-row {
+display: flex;
+gap: 3rem;
+align-items: center;
+}
+.alt-row.reverse { flex-direction: row-reverse; }
+.alt-img {
+flex: 1;
+border-radius: var(--radius);
+overflow: hidden;
+aspect-ratio: 5/4;
+background: var(--sage);
+}
+.alt-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.alt-img:hover img { transform: scale(1.04); }
+.alt-text h3 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+margin-bottom: 0.75rem;
+}
+
+/* cards */
+.cards-grid {
+max-width: var(--container);
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+gap: 2rem;
+}
+.card {
+background: white;
+border-radius: var(--radius);
+padding: 1.6rem;
+transition: all 0.4s;
+box-shadow: var(--shadow-soft);
+}
+.card:hover {
+transform: translateY(-8px);
+box-shadow: var(--shadow-card);
+}
+.card-img {
+aspect-ratio: 5/4;
+border-radius: 18px;
+overflow: hidden;
+margin-bottom: 1.2rem;
+}
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.card:hover .card-img img { transform: scale(1.06); }
+
+/* future */
+.future-grid {
+max-width: var(--container);
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+gap: 2rem;
+}
+.future-card {
+background: white;
+border-radius: var(--radius);
+padding: 1.6rem;
+box-shadow: var(--shadow-soft);
+transition: all 0.3s ease;
+}
+.future-card:hover { transform: translateY(-6px); }
+.future-tag {
+background: var(--lavender);
+padding: 5px 14px;
+border-radius: 60px;
+font-size: 0.7rem;
+font-weight: 600;
+display: inline-block;
+color: var(--lilac-deep);
+margin-bottom: 1rem;
+}
+.future-img {
+margin-top: 1rem;
+border-radius: var(--radius-sm);
+overflow: hidden;
+aspect-ratio: 5/4;
+}
+.future-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* reflection */
+.reflection-grid {
+max-width: var(--container);
+margin: 0 auto 2rem auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+gap: 2rem;
+}
+.reflection-quote {
+background: white;
+padding: 2rem;
+border-radius: var(--radius);
+box-shadow: var(--shadow-soft);
+font-style: italic;
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.25rem;
+}
+
+/* ----- NUEVA GALERÍA ESTÁTICA (16 imágenes modificables) ----- */
+.gallery-section {
+padding: 80px clamp(20px,5vw,56px);
+}
+.static-gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 24px;
+max-width: var(--container);
+margin: 0 auto;
+}
+.gallery-img-card {
+aspect-ratio: 4 / 5;
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: var(--shadow-soft);
+transition: transform 0.3s ease, box-shadow 0.3s;
+cursor: pointer;
+background: #f0ebe4;
+}
+.gallery-img-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.5s ease;
+}
+.gallery-img-card:hover {
+transform: translateY(-6px);
+box-shadow: var(--shadow-card);
+}
+.gallery-img-card:hover img {
+transform: scale(1.04);
+}
+
+/* footer, back to top, lightbox */
+.footer {
+background: var(--beige);
+padding: 64px clamp(20px,5vw,56px) 32px;
+border-top: 1px solid var(--line);
+margin-top: 40px;
+text-align: center;
+}
+.back-to-top {
+position: fixed;
+bottom: 28px;
+right: 24px;
+background: var(--lilac-deep);
+width: 48px;
+height: 48px;
+border-radius: 50%;
+display: grid;
+place-items: center;
+cursor: pointer;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s;
+box-shadow: var(--shadow-card);
+border: none;
+color: white;
+font-size: 1.6rem;
+z-index: 90;
+}
+.back-to-top.show {
+opacity: 1;
+visibility: visible;
+}
+.lightbox {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.88);
+backdrop-filter: blur(8px);
+z-index: 2000;
+display: none;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+max-width: 88vw;
+max-height: 85vh;
+border-radius: 28px;
+box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+.close-lb {
+position: absolute;
+top: 24px;
+right: 32px;
+background: white;
+border: none;
+font-size: 2rem;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+cursor: pointer;
+font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+.hero-grid { grid-template-columns: 1fr; }
+.ch1-grid { grid-template-columns: repeat(2,1fr); }
+.alt-row, .alt-row.reverse { flex-direction: column; }
+.static-gallery-grid { grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); }
+.nav-links {
+position: fixed;
+top: 70px;
+left: 0;
+right: 0;
+background: rgba(250,249,246,0.98);
+backdrop-filter: blur(20px);
+flex-direction: column;
+padding: 28px;
+gap: 20px;
+transform: translateY(-140%);
+transition: 0.4s;
+border-bottom: 1px solid var(--line);
+}
+.nav-links.open { transform: translateY(0); }
+.menu-toggle { display: flex; }
+}
+@media (max-width: 700px) {
+.static-gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); }
+.ch1-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+.static-gallery-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+<a href="#home" class="brand"><span class="brand-mark">Y</span><span class="brand-name">Yuridia Valentina</span></a>
+<nav class="nav-links" id="navLinks">
+<a href="#home"><span>01</span> Home</a><a href="#early-life"><span>02</span> Early Life</a><a href="#challenges"><span>03</span> Challenges</a>
+<a href="#achievements"><span>04</span> Achievements</a><a href="#today"><span>05</span> Today</a><a href="#future"><span>06</span> Future</a>
+<a href="#reflections"><span>07</span> Reflections</a><a href="#gallery"><span>08</span> Gallery</a>
+</nav>
+<button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO SECTION (tus imágenes originales, NO modificadas) -->
+<section id="home" class="hero">
+<div class="hero-grid">
+<div class="hero-text reveal">
+<p class="eyebrow">An autobiography</p>
+<h1 class="display">Yuridia<br/><em>Valentina</em><br/>Carbajal Burrola</h1>
+<p class="quote">"We are all just prisoners here of our own device."</p>
+<p class="intro">I am Yuridia. A curious soul seeing the world with gentle eyes. I enjoy peaceful times, handwritten letters, and the music of small things. I value honesty, family and love.</p>
+<div class="btn-group"><a href="#early-life" class="btn btn-primary">read my story</a><a href="#gallery" class="btn btn-ghost">visual diary</a></div>
+</div>
+<div class="hero-collage reveal">
+<figure class="tile tile-main"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\99e46962-9689-4b85-b572-d7058a43f124.jpeg"  alt="Yuridia portrait"></figure>
+<figure class="tile tile-a"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\1000037190.png" alt="memory"></figure>
+<figure class="tile tile-b"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\1a4359f6-6a6e-49cf-bbba-70f9dcafe637.jfif" alt="memory"></figure>
+<figure class="tile tile-c"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\ec9d6362-11e2-49e7-bba1-3c4dab39cc9f.jfif" alt="memory"></figure>
+<figure class="tile tile-d"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\PHOTO-2026-06-05-01-08-21 (2).jpg" alt="memory"></figure>
+</div>
+</div>
+<div class="scroll-cue"></div>
+</section>
+
+<!-- CHAPTER 1: EARLY LIFE (tus imágenes originales) -->
+<section id="early-life" class="chapter">
+<div class="chapter-head reveal"><span class="chapter-num">Chapter 01</span><h2 class="section-title">Early <em>Life</em></h2><p class="section-sub">Childhood memories · Family roots · First dreams</p></div>
+<div class="ch1-grid">
+<article class="ch1-text reveal"><p>I grew up in a very loving enviroment, although my parents were very young they did their best to take good and responsable care of me.</p><p>Normally kids have one childhood house, i didnt have that, my parents and I used to move to lots of different places, which to be honest was very fun.</p> </p>I enjoy very much playing with my toys alone in my room, I was also a vey picky girl who doesnt like to play outside or with dirt, this was very curious for my parents.</p></article>
+<figure class="ch1-img reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\09f26887-2aa1-4e4b-9bfc-636c1eb664ea.jfif" alt="childhood"></figure>
+<figure class="ch1-img reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\233f945c-663d-4359-b926-bb950ae96860.jfif" alt="family"></figure>
+<figure class="ch1-img reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\f84c3d1a-4066-4edd-942d-f84905c7bd7a.jfif" alt="garden"></figure>
+<figure class="ch1-img reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\9ce9d0cc-e390-44e4-8e0b-e3345d84f9c3.jfif" alt="old house"></figure>
+</div>
+</section>
+
+<!-- CHAPTER 2: CHALLENGES (tus imágenes originales) -->
+<section id="challenges" class="chapter chapter-sage">
+<div class="chapter-head reveal"><span class="chapter-num">Chapter 02</span><h2 class="section-title">Challenges &amp; <em>Lessons</em></h2><p class="section-sub">Obstacles · Resilience · Metamorphosis</p></div>
+<div class="alt-list">
+<div class="alt-row reveal"><figure class="alt-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\index.html\ec9d6362-11e2-49e7-bba1-3c4dab39cc9f.jfif" alt="storm"></figure><div class="alt-text"><h3>The first obstacle</h3><p>For me it has never been easy th action of making friends, I learn from the bad way, that people not always have the best intentions with you, so you better be careful choosing your friendships.</p></div></div>
+<div class="alt-row reverse reveal"><figure class="alt-img"><img src="https://picsum.photos/id/22/600/500" alt="closed door"></figure><div class="alt-text"><h3>A difficult path</h3><p>Since I was little I have always had that fascination for the arts and also music. My mom used to sing alot, she used to participate in differents events of the community and thats one of the reasons why I love being on a band.</p></div></div>
+<div class="alt-row reveal"><figure class="alt-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\2b82d523-1d73-4509-a7c8-de225a2d9f99.jfif" alt="quiet years"></figure><div class="alt-text"><h3>Unable to decide</h3><p>Ever since I was young I havent been able to take important decisions, I have always struggle in thet road.</p></div></div>
+<div class="alt-row reverse reveal"><figure class="alt-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\1caf5c7e-7c2a-4eaa-946b-1b9cfe48124c.jfif" alt="growth through pain"></figure><div class="alt-text"><h3>Roots that hold</h3><p>I also learned that vulnerability is not weakness it is somewhere where courage grows.</p></div></div>
+<div class="alt-row reveal"><figure class="alt-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\9bd058f4-9018-4322-8304-6c0ecafbf417.jfif" alt="inner light"></figure><div class="alt-text"><h3>Difficul Temperament</h3><p>Since I was young I have always had a very strong temperament, I cry with everithing and also get furious by little things.</p></div></div>
+<div class="alt-row reverse reveal"><figure class="alt-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\b5dc21a2-3931-4893-a32e-edb088052db7.jfif" alt="letting go"></figure><div class="alt-text"><h3>Absence of caring</h3><p>Because my parent get divorced when I was little, Its always been a problem the absence of my dads presence and that is reflected on our relationship as father and daughter.</p></div></div>
+<div class="alt-row reveal"><figure class="alt-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\a24b5863-03a8-4ec5-9b58-59a726d6db25.jfif" alt="new beginning"></figure><div class="alt-text"><h3>Dying my Hair</h3><p>A less dramatic challenge that I struggle with is the constance need of dying my hair of different colors, but you cannot say that it look bad.</p></div></div>
+</div>
+</section>
+
+<!-- CHAPTER 3: ACHIEVEMENTS (tus imágenes originales) -->
+<section id="achievements" class="chapter">
+<div class="chapter-head reveal"><span class="chapter-num">Chapter 03</span><h2 class="section-title">Achievements</h2><p class="section-sub">Milestones · Personal growth · Persistence</p></div>
+<div class="cards-grid">
+<div class="card reveal"><div class="card-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\2dd7b72f-8965-41f1-94e2-6d99a787dc81.jfif" alt="academic"></div><h3>Academic path</h3><p>I have achieved more than the old me would think, I may not have the best grades but I am very proud that I always try to give the best of myself.</p></div>
+<div class="card reveal"><div class="card-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\1d6d8847-2831-4314-9c88-a8f1d1e9d822.jfif" alt="daily work"></div><h3>Daily work</h3><p>Day by day I try to become a better version of myself, also to create a path where I can start with all my goals.</p></div>
+<div class="card reveal"><div class="card-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\38b8ee41-c646-42b7-a880-74292cf8a1cc.jfif" alt="victories"></div><h3>Small victories</h3><p>I have collected tiny victories like being able to sing in front of lots of people, not trust everybody and also I consider my little group of friends as a victory.</p></div>
+<div class="card reveal"><div class="card-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\2b82d523-1d73-4509-a7c8-de225a2d9f99.jfif" alt="becoming"></div><h3>Becoming</h3><p>I have been becoming the woman my younger self once whispered about at night, the woman that I always want to become, peaceful, kind, joyful, etc..</p></div>
+</div>
+</section>
+
+<!-- CHAPTER 4: TODAY (tus imágenes originales) -->
+<section id="today" class="chapter chapter-lavender">
+<div class="chapter-head reveal"><span class="chapter-num">Chapter 04</span><h2 class="section-title">Who I Am <em>Today</em></h2><p class="section-sub">Personality · Values · Quiet strength</p></div>
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px,1fr));">
+<article class="reveal" style="background: white; border-radius: var(--radius); padding:2rem;"><p>Today, I am a more conscious, dedicated, and inspiring person. I have learned a lot from my experiences, and every day I try to become the best version of myself. I am more aware of my value, my goals, and the kind of person I want to be. I work hard, stay positive, and always look for ways to grow and improve.
+
+My future vision is to continue growing as a person and achieving my goals. I want to become stronger, wiser, and more confident with every year that passes. I believe that with effort, patience, and determination, I can create the life I dream of and inspire others around me.</p></article>
+<figure class="reveal" style="border-radius: var(--radius); overflow:hidden;"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\d3cd20f1-afc8-4dd8-8aa5-ef651e2c54b0.jfif" style="width:100%;height:100%;object-fit:cover;"></figure>
+<figure class="reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\8df9e7af-5844-4617-9a61-7f20d3b1aec4.jfif" style="border-radius: var(--radius);width:100%;"></figure>
+</div>
+</section>
+
+<!-- CHAPTER 5: FUTURE (tus imágenes originales) -->
+<section id="future" class="chapter">
+<div class="chapter-head reveal"><span class="chapter-num">Chapter 05</span><h2 class="section-title">Future <em>Vision</em></h2><p class="section-sub">Dreams · Goals · Horizon</p></div>
+<div class="future-grid">
+<div class="future-card reveal"><div class="future-tag">will</div><h3>Promise</h3><p>I promise myself that I will keep giving my best every day. I will learn to set healthy boundaries, stay true to myself, and never give up on my dreams. No matter how difficult life becomes, I will continue moving forward with courage, faith, and determination.</p><div class="future-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\0f078924-07f3-4c57-b96d-f8ce58870b70.jfif" alt="promise"></div></div>
+<div class="future-card reveal"><div class="future-tag">going to</div><h3>Plan</h3><p>My plan is to study while practicing my hobbies, especially singing, and at the same time work hard to support my goals. I know it may be challenging, but I am willing to make sacrifices and stay committed. Step by step, I want to grow in every area of my life, including my education, career, talents, and personal development.</p><div class="future-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\beb585c3-61e3-4c23-b3d9-4364af5bba90.jfif" alt="travel"></div></div>
+<div class="future-card reveal"><div class="future-tag">future continuous</div><h3>Vision</h3><p>In ten years and beyond, I see myself living a happy and fulfilling life. I imagine having my own home, my dream cars, and a loving family or ideal partner by my side. I hope to enjoy all the beautiful things life has to offer and feel grateful for everything I have achieved.</p><div class="future-img"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\cfee1bc0-ef0e-4ebb-a40d-aa63bed3835a.jfif" alt="writing"></div></div>
+</div>
+</section>
+
+<!-- REFLECTIONS (tus imágenes originales) -->
+<section id="reflections" class="chapter chapter-beige">
+<div class="chapter-head reveal"><span class="chapter-num">Reflection</span><h2 class="section-title">What Life Has <em>Taught Me</em></h2></div>
+<div class="reflection-grid">
+<blockquote class="reflection-quote reveal"><p>Life has taught me that every decision has consequences. Some choices bring success, while others teach important lessons. Even when I make mistakes, I understand that they help me learn, grow, and become a better person. Every decision is an opportunity to shape my future.</p></blockquote>
+<blockquote class="reflection-quote reveal"><p>Life has also taught me the difference between true and false friendships. Real friends support you, respect you, and stay by your side during good and difficult times. False friends may disappear when you need them most. These experiences have shown me the importance of valuing genuine people and protecting my peace.</p></blockquote>
+<blockquote class="reflection-quote reveal"><p>Finally, life has taught me the importance of self-love. Loving myself means accepting who I am, recognizing my worth, and taking care of my well-being. Self-love helps me build confidence, make better choices, and create healthy relationships. It reminds me that I deserve happiness, respect, and all the good things life can offer.</p></blockquote>
+</div>
+<div class="future-grid" style="margin-top: 2rem;"><div class="future-img reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\01542108-ee4a-48a1-9054-f71eebbd390e.jfif" alt="lavender field"></div><div class="future-img reveal"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\acfb71fa-37b6-4c2e-afda-6b685cdec6d8.jfif" alt="sunset garden"></div></div>
+</section>
+
+<!-- ==================== GALERÍA ESTÁTICA (16 imágenes modificables) ==================== -->
+<section id="gallery" class="gallery-section">
+<div class="chapter-head reveal">
+<span class="chapter-num">Album</span>
+<h2 class="section-title">Photo <em>Gallery</em></h2>
+<p class="section-sub"></p>
+</div>
+<div class="static-gallery-grid">
+<!-- Imagen 1: cambia el src por la ruta de tu imagen -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\6c57bbfd-a697-4ec8-9b69-ee3be7c11c5a.jfif" alt="Gallery image 1"></div>
+<!-- Imagen 2 -->
+<div class="gallery-img-card"><img src= "C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\2fa14148-c109-44af-a2b4-f4f819107f2d.jfif" alt="Gallery image 2"></div>
+<!-- Imagen 3 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\3e04f885-0602-45f4-9e93-1a5e885d5ca5.jfif" alt="Gallery image 3"></div>
+<!-- Imagen 4 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\3f8d295d-0c77-4b77-b41b-9abf1027f9c6.jfif" alt="Gallery image 4"></div>
+<!-- Imagen 5 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\233b0da0-a142-4746-8481-a479d2484769.jfif" alt="Gallery image 5"></div>
+<!-- Imagen 6 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\84a3e5b1-9cea-4334-9c3e-99e57a429cac.jfif" alt="Gallery image 6"></div>
+<!-- Imagen 7 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\640b1d56-2bc1-400d-bd9e-f0196880296f.jfif" alt="Gallery image 7"></div>
+<!-- Imagen 8 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\9ce9d0cc-e390-44e4-8e0b-e3345d84f9c3.jfif" alt="Gallery image 8"></div>
+<!-- Imagen 9 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\4938dd14-bde0-4a23-9b0e-3229d37494f5.jfif" alt="Gallery image 9"></div>
+<!-- Imagen 10 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\6794ce5e-828c-4ecd-9407-9dacb4fa8d31.jfif" alt="Gallery image 10"></div>
+<!-- Imagen 11 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\b2c2b17f-c867-4412-9ba4-bf0dcb232060.jfif" alt="Gallery image 11"></div>
+<!-- Imagen 12 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\7f999942-f16d-43f2-8cb9-a965ce4700ca.jfif" alt="Gallery image 12"></div>
+<!-- Imagen 13 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\c3f78abe-c797-4413-ba3a-4ac5d3781e1e.jfif" alt="Gallery image 13"></div>
+<!-- Imagen 14 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\ea3e94bd-84c8-4508-b89a-5ed09935564e.jfif" alt="Gallery image 14"></div>
+<!-- Imagen 15 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\b57986e7-6c69-44df-8675-d069cbb51dc1.jfif" alt="Gallery image 15"></div>
+<!-- Imagen 16 -->
+<div class="gallery-img-card"><img src="C:\Users\Blanca\Desktop\autobiografia 2\imagenes wowo\8be764a2-f8bb-46e4-af4a-d8cf4dce18b3.jfif" alt="Gallery image 16"></div>
+</div>
+</section>
+
+<footer class="footer"><p>©️ 2026 Yuridia Valentina Carbajal Burrola · Bloom where you are planted</p></footer>
+<button class="back-to-top" id="backToTop">↑</button>
+<div id="lightbox" class="lightbox"><img id="lbImg" alt=""><button class="close-lb" id="closeLb">✕</button></div>
+
+<script>
+// Lightbox para todas las imágenes de la galería estática
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+function openLightbox(src) {
+lbImg.src = src;
+lightbox.classList.add('active');
+}
+function closeLightbox() {
+lightbox.classList.remove('active');
+lbImg.src = '';
+}
+document.getElementById('closeLb').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+if (e.target === lightbox) closeLightbox();
+});
+
+// Asignar evento click a todas las imágenes de la galería estática
+const galleryImages = document.querySelectorAll('.static-gallery-grid img');
+galleryImages.forEach(img => {
+img.addEventListener('click', (e) => {
+e.stopPropagation();
+openLightbox(img.src);
+});
+});
+
+// ========== NAVBAR SCROLL & ACTIVE LINKS ==========
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 50) navbar.classList.add('scrolled');
+else navbar.classList.remove('scrolled');
+const sections = document.querySelectorAll('section[id]');
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 120;
+if (scrollY >= sectionTop) current = section.getAttribute('id');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.classList.remove('active');
+const href = link.getAttribute('href').substring(1);
+if (href === current) link.classList.add('active');
+});
+});
+
+// back to top
+const backBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 500) backBtn.classList.add('show');
+else backBtn.classList.remove('show');
+});
+backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+navLinks.classList.toggle('open');
+menuToggle.classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.addEventListener('click', () => {
+navLinks.classList.remove('open');
+menuToggle.classList.remove('open');
+});
+});
+
+// reveal on scroll
+const revealElements = document.querySelectorAll('.reveal');
+const checkReveal = () => {
+const trigger = window.innerHeight * 0.85;
+revealElements.forEach(el => {
+const top = el.getBoundingClientRect().top;
+if (top < trigger) el.classList.add('in-view');
+});
+};
+window.addEventListener('scroll', checkReveal);
+window.addEventListener('resize', checkReveal);
+checkReveal();
+</script>
+</body>
+</html>
